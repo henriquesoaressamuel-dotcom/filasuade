@@ -1,0 +1,441 @@
+<!-- SOLICITAÇÃO -->
+
+<section id="solicitacao" class="section">
+    <link rel="stylesheet" href="css/style2.css">
+    <div class="section-title">
+
+        <span class="tag">NOVA SOLICITAÇÃO</span>
+
+        <h2>
+            Registre uma necessidade de atendimento
+        </h2>
+
+        <p>
+            Preencha os dados abaixo para gerar um protocolo.
+        </p>
+
+    </div>
+
+
+    <div class="form-container">
+
+        <form id="formSolicitacao">
+
+            <div class="form-grid">
+
+                <div class="input-group">
+
+                    <label for="nome">
+                        Nome do paciente
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Digite um nome fictício"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="tipo">
+                        Tipo de atendimento
+                    </label>
+
+                    <select id="tipo" required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Consulta">
+                            Consulta
+                        </option>
+
+                        <option value="Exame">
+                            Exame
+                        </option>
+
+                        <option value="Encaminhamento">
+                            Encaminhamento
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="especialidade">
+                        Especialidade / serviço
+                    </label>
+
+                    <input
+                        type="text"
+                        id="especialidade"
+                        placeholder="Ex.: Cardiologia"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="prioridade">
+                        Prioridade
+                    </label>
+
+                    <select id="prioridade" required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Baixa">
+                            Baixa
+                        </option>
+
+                        <option value="Normal">
+                            Normal
+                        </option>
+
+                        <option value="Alta">
+                            Alta
+                        </option>
+
+                        <option value="Urgente">
+                            Urgente
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="observacao">
+                    Observação
+                </label>
+
+                <textarea
+                    id="observacao"
+                    rows="4"
+                    placeholder="Descreva a solicitação de forma breve">
+                </textarea>
+
+            </div>
+
+
+            <button class="btn primary" type="submit">
+
+                Gerar protocolo
+
+            </button>
+
+        </form>
+
+
+        <div id="resultadoCadastro"
+             class="resultado hidden">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONSULTAR -->
+
+<section id="consulta" class="section consulta-section">
+
+    <div class="section-title">
+
+        <span class="tag">ACOMPANHAMENTO</span>
+
+        <h2>
+            Consulte sua solicitação
+        </h2>
+
+        <p>
+            Digite o protocolo gerado pelo sistema.
+        </p>
+
+    </div>
+
+
+    <div class="consulta-box">
+
+        <input
+            type="text"
+            id="protocoloConsulta"
+            placeholder="Ex.: FS-123456"
+        >
+
+        <button
+            class="btn primary"
+            onclick="consultarProtocolo()">
+
+            Consultar
+
+        </button>
+
+    </div>
+
+
+    <div id="resultadoConsulta"></div>
+
+</section>
+
+
+<!-- FILA -->
+
+<section id="fila" class="section">
+
+    <div class="section-title">
+
+        <span class="tag">FILA EM TEMPO REAL</span>
+
+        <h2>
+            Situação das solicitações
+        </h2>
+
+    </div>
+
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+
+            <span>📋</span>
+
+            <strong id="totalSolicitacoes">
+                0
+            </strong>
+
+            <small>Total de solicitações</small>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <span>🩺</span>
+
+            <strong id="totalConsultas">
+                0
+            </strong>
+
+            <small>Consultas</small>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <span>🔬</span>
+
+            <strong id="totalExames">
+                0
+            </strong>
+
+            <small>Exames</small>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <span>⚠️</span>
+
+            <strong id="totalUrgentes">
+                0
+            </strong>
+
+            <small>Alta prioridade</small>
+
+        </div>
+
+    </div>
+
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Protocolo</th>
+                    <th>Tipo</th>
+                    <th>Serviço</th>
+                    <th>Prioridade</th>
+                    <th>Status</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="tabelaFila">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- GESTOR -->
+
+<section id="gestor" class="section gestor-section">
+
+    <div class="section-title">
+
+        <span class="tag">VISÃO DO GESTOR</span>
+
+        <h2>
+            Informação para tomar decisões
+        </h2>
+
+        <p>
+            O sistema pode ajudar gestores a identificar
+            gargalos, demandas acumuladas e necessidade
+            de novas vagas.
+        </p>
+
+    </div>
+
+
+    <div class="gestor-grid">
+
+        <div class="gestor-card">
+
+            <h3>🚨 Alertas</h3>
+
+            <p>
+                Identificar filas com tempo de espera elevado.
+            </p>
+
+        </div>
+
+
+        <div class="gestor-card">
+
+            <h3>📈 Indicadores</h3>
+
+            <p>
+                Visualizar quantidade de solicitações,
+                prioridades e atendimentos.
+            </p>
+
+        </div>
+
+
+        <div class="gestor-card">
+
+            <h3>🏥 Recursos</h3>
+
+            <p>
+                Auxiliar no gerenciamento das vagas
+                disponíveis.
+            </p>
+
+        </div>
+
+
+        <div class="gestor-card">
+
+            <h3>🔎 Transparência</h3>
+
+            <p>
+                Permitir que o cidadão acompanhe
+                a situação de sua solicitação.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PITCH -->
+
+<section class="pitch">
+
+    <div>
+
+        <span class="tag">NOSSA PROPOSTA</span>
+
+        <h2>
+            Não queremos apenas digitalizar a fila.
+        </h2>
+
+        <p>
+            Queremos tornar o acesso à saúde mais
+            inteligente, organizado e humano.
+        </p>
+
+    </div>
+
+    <div class="pitch-icon">
+        ❤️
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    <div>
+
+        <h2>🏥 FilaSaúde</h2>
+
+        <p>
+            Projeto acadêmico de tecnologia aplicada
+            à organização da saúde pública.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <strong>Equipe</strong>
+
+        <p>
+            Cauã • Gabriel • Diego • Samuel • Adrian • Nicolas G.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <strong>Projeto</strong>
+
+        <p>
+            HTML • CSS • JavaScript
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
