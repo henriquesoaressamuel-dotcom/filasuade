@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="FilaSaúde - Sistema de organização de filas da saúde pública">
+
+    <title>FilaSaúde | Saúde mais organizada</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="topo">
+
+    <div class="logo">
+        <span class="logo-icon">🏥</span>
+
+        <div>
+            <h1>Fila<span>Saúde</span></h1>
+            <small>Saúde mais organizada</small>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#solicitacao">Solicitação</a>
+        <a href="#consulta">Consultar</a>
+        <a href="#fila">Fila</a>
+        <a href="#gestor">Gestor</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section id="inicio" class="hero">
+
+    <div class="hero-text">
+
+        <span class="tag">TECNOLOGIA + SAÚDE PÚBLICA</span>
+
+        <h2>
+            Menos espera.
+            <strong>Mais organização.</strong>
+        </h2>
+
+        <p>
+            Uma solução digital para organizar consultas,
+            exames e encaminhamentos, facilitando o
+            acompanhamento dos pacientes e a gestão das filas.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#solicitacao" class="btn primary">
+                Solicitar atendimento
+            </a>
+
+            <a href="#consulta" class="btn secondary">
+                Consultar protocolo
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+        <div class="status-header">
+            <span>📊 Painel da fila</span>
+            <span class="online">● Online</span>
+        </div>
+
+        <div class="fila-number">
+            127
+        </div>
+
+        <p>pessoas aguardando atendimento</p>
+
+        <div class="mini-stats">
+
+            <div>
+                <strong>32</strong>
+                <span>Consultas</span>
+            </div>
+
+            <div>
+                <strong>54</strong>
+                <span>Exames</span>
+            </div>
+
+            <div>
+                <strong>41</strong>
+                <span>Encaminhamentos</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROBLEMA -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <span class="tag">O PROBLEMA</span>
+
+        <h2>
+            Quando a fila cresce,
+            <span>a informação precisa acompanhar.</span>
+        </h2>
+
+        <p>
+            A alta demanda, a falta de vagas, problemas de
+            organização e falhas na regulação podem aumentar
+            o tempo de espera da população.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <article class="card">
+            <div class="card-icon">⏳</div>
+
+            <h3>Longa espera</h3>
+
+            <p>
+                Pacientes podem esperar muito tempo
+                por consultas, exames e procedimentos.
+            </p>
+        </article>
+
+
+        <article class="card">
+            <div class="card-icon">📋</div>
+
+            <h3>Desorganização</h3>
+
+            <p>
+                Informações espalhadas dificultam
+                o controle das demandas.
+            </p>
+        </article>
+
+
+        <article class="card">
+            <div class="card-icon">📉</div>
+
+            <h3>Falta de indicadores</h3>
+
+            <p>
+                Gestores precisam visualizar onde
+                estão as maiores filas.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- COMO FUNCIONA -->
+
+<section class="section dark-section">
+
+    <div class="section-title">
+
+        <span class="tag">COMO FUNCIONA</span>
+
+        <h2>
+            Uma jornada mais simples
+            para o paciente.
+        </h2>
+
+    </div>
+
+
+    <div class="steps">
+
+        <div class="step">
+
+            <div class="step-number">1</div>
+
+            <h3>Solicitação</h3>
+
+            <p>
+                O paciente registra sua necessidade.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">2</div>
+
+            <h3>Classificação</h3>
+
+            <p>
+                A demanda recebe uma prioridade.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">3</div>
+
+            <h3>Organização</h3>
+
+            <p>
+                A solicitação entra na fila correta.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">4</div>
+
+            <h3>Acompanhamento</h3>
+
+            <p>
+                O paciente acompanha o andamento.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SOLICITAÇÃO -->
+
+<section id="solicitacao" class="section">
+
+    <div class="section-title">
+
+        <span class="tag">NOVA SOLICITAÇÃO</span>
+
+        <h2>
+            Registre uma necessidade de atendimento
+        </h2>
+
+        <p>
+            Preencha os dados abaixo para gerar um protocolo.
+        </p>
+
+    </div>
+
+
+    <div class="form-container">
+
+        <form id="formSolicitacao">
+
+            <div class="form-grid">
+
+                <div class="input-group">
+
+                    <label for="nome">
+                        Nome do paciente
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Digite um nome fictício"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="tipo">
+                        Tipo de atendimento
+                    </label>
+
+                    <select id="tipo" required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Consulta">
+                            Consulta
+                        </option>
+
+                        <option value="Exame">
+                            Exame
+                        </option>
+
+                        <option value="Encaminhamento">
+                            Encaminhamento
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="especialidade">
+                        Especialidade / serviço
+                    </label>
+
+                    <input
+                        type="text"
+                        id="especialidade"
+                        placeholder="Ex.: Cardiologia"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="prioridade">
+                        Prioridade
+                    </label>
+
+                    <select id="prioridade" required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Baixa">
+                            Baixa
+                        </option>
+
+                        <option value="Normal">
+                            Normal
+                        </option>
+
+                        <option value="Alta">
+                            Alta
+                        </option>
+
+                        <option value="Urgente">
+                            Urgente
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="observacao">
+                    Observação
+                </label>
+
+                <textarea
+                    id="observacao"
+                    rows="4"
+                    placeholder="Descreva a solicitação de forma breve">
+                </textarea>
+
+            </div>
+
+
+            <button class="btn primary" type="submit">
+
+                Gerar protocolo
+
+            </button>
+
+        </form>
+
+
+        <div id="resultadoCadastro"
+             class="resultado hidden">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONSULTAR -->
+
+<section id="consulta" class="section consulta-section">
+
+    <div class="section-title">
+
+        <span class="tag">ACOMPANHAMENTO</span>
+
+        <h2>
+            Consulte sua solicitação
+        </h2>
+
+        <p>
+            Digite o protocolo gerado pelo sistema.
+        </p>
+
+    </div>
+
+
+    <div class="consulta-box">
+
+        <input
+            type="text"
+            id="protocoloConsulta"
+            placeholder="Ex.: FS-123456"
+        >
+
+        <button
+            class="btn primary"
+            onclick="consultarProtocolo()">
+
+            Consultar
+
+        </button>
+
+    </div>
+
+
+    <div id="resultadoConsulta"></div>
+
+</section>
+
+
+<!-- FILA -->
+
+<section id="fila" class="section">
+
+    <div class="section-title">
+
+        <span class="tag">FILA EM TEMPO REAL</span>
+
+        <h2>
+            Situação das solicitações
+        </h2>
+
+    </div>
+
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+
+            <span>📋</span>
+
+            <strong id="totalSolicitacoes">
+                0
+            </strong>
+
+            <small>Total de solicitações</small>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <span>🩺</span>
+
+            <strong id="totalConsultas">
+                0
+            </strong>
+
+            <small>Consultas</small>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <span>🔬</span>
+
+            <strong id="totalExames">
+                0
+            </strong>
+
+            <small>Exames</small>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <span>⚠️</span>
+
+            <strong id="totalUrgentes">
+                0
+            </strong>
+
+            <small>Alta prioridade</small>
+
+        </div>
+
+    </div>
+
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Protocolo</th>
+                    <th>Tipo</th>
+                    <th>Serviço</th>
+                    <th>Prioridade</th>
+                    <th>Status</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="tabelaFila">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- GESTOR -->
+
+<section id="gestor" class="section gestor-section">
+
+    <div class="section-title">
+
+        <span class="tag">VISÃO DO GESTOR</span>
+
+        <h2>
+            Informação para tomar decisões
+        </h2>
+
+        <p>
+            O sistema pode ajudar gestores a identificar
+            gargalos, demandas acumuladas e necessidade
+            de novas vagas.
+        </p>
+
+    </div>
+
+
+    <div class="gestor-grid">
+
+        <div class="gestor-card">
+
+            <h3>🚨 Alertas</h3>
+
+            <p>
+                Identificar filas com tempo de espera elevado.
+            </p>
+
+        </div>
+
+
+        <div class="gestor-card">
+
+            <h3>📈 Indicadores</h3>
+
+            <p>
+                Visualizar quantidade de solicitações,
+                prioridades e atendimentos.
+            </p>
+
+        </div>
+
+
+        <div class="gestor-card">
+
+            <h3>🏥 Recursos</h3>
+
+            <p>
+                Auxiliar no gerenciamento das vagas
+                disponíveis.
+            </p>
+
+        </div>
+
+
+        <div class="gestor-card">
+
+            <h3>🔎 Transparência</h3>
+
+            <p>
+                Permitir que o cidadão acompanhe
+                a situação de sua solicitação.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PITCH -->
+
+<section class="pitch">
+
+    <div>
+
+        <span class="tag">NOSSA PROPOSTA</span>
+
+        <h2>
+            Não queremos apenas digitalizar a fila.
+        </h2>
+
+        <p>
+            Queremos tornar o acesso à saúde mais
+            inteligente, organizado e humano.
+        </p>
+
+    </div>
+
+    <div class="pitch-icon">
+        ❤️
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    <div>
+
+        <h2>🏥 FilaSaúde</h2>
+
+        <p>
+            Projeto acadêmico de tecnologia aplicada
+            à organização da saúde pública.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <strong>Equipe</strong>
+
+        <p>
+            Cauã • Gabriel • Diego • Samuel • Adrian • Nicolas G.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <strong>Projeto</strong>
+
+        <p>
+            HTML • CSS • JavaScript
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
