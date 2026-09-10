@@ -691,7 +691,7 @@ footer p {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 300px) {
 
     .hero {
         padding: 60px 5%;
@@ -730,5 +730,41 @@ footer p {
     .pitch h2 {
         font-size: 32px;
     }
+.grafico-container {
+   .grafico-container {
+    max-width: 150px;
+    margin: 30px auto;
+    text-align: center;
+    padding: 15px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    
+}
 
+.grafico-container h3 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 14px;
+}
+}
+
+.grafico-container h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+.grafico-container {
+    max-width: 150px;
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.grafico-container h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
 }
